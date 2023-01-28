@@ -53,7 +53,10 @@ void Player::generate()
     }
 }
 
-void Player::shuffle() {}
+void Player::shuffle() 
+{
+    //i should use some kind of sort like bubble or quick
+}
 
 void Player::distribute()
 {
