@@ -36,6 +36,6 @@ class Mahjong : public Game<Mahjong>
 
         //Observer observer;
 };
-
+#include "Game.cpp"
 
 #endif //C___MAHJONG_H

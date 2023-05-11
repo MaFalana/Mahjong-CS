@@ -1,13 +1,13 @@
-#pragma once
+// #pragma once
 
-#include <memory>
-#include <restbed>
+// #include <memory>
+// #include <restbed>
 
-using namespace std;
-using namespace restbed;
+// using namespace std;
+// using namespace restbed;
 
-class IResourceFactory
-{
-   public:
-       virtual shared_ptr<Resource> get_resource() const = 0;
-};
+// class IResourceFactory
+// {
+//    public:
+//        virtual shared_ptr<Resource> get_resource() const = 0;
+// };

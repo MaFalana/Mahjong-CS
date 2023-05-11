@@ -6,7 +6,7 @@ CXX           = g++
 LD            = $(CXX) $(CCFLAGS) $(CPPFLAGS)
 AR            = ar
 PICFLAGS      = -fPIC
-CPPFLAGS      = $(PICFLAGS) $(GENFLAGS) -D_REENTRANT
+CPPFLAGS      = $(PICFLAGS) $(GENFLAGS) -D_REENTRANT -I/Users/aurum/restbed
 OBJEXT        = .o
 OUTPUT_OPTION = -o "$@"
 COMPILE.c     = $(CC) $(CFLAGS) $(CPPFLAGS) -c
@@ -31,8 +31,8 @@ LIBPREFIX     = lib
 LIBSUFFIX     = 
 GENFLAGS      = -O
 LDLIBS        = -ldl $(subst lib,-l,$(sort $(basename $(notdir $(wildcard /usr/lib/librt.so /lib/librt.so))))) -lpthread
-OBJS          = Player$(OBJEXT) driver2$(OBJEXT) MahjongService$(OBJEXT) driver$(OBJEXT) tempCodeRunnerFile$(OBJEXT) Mahjong$(OBJEXT) Tile$(OBJEXT) MahjongResourceFactory$(OBJEXT) Game$(OBJEXT) Suit$(OBJEXT)
-SRC           = Player.cpp driver2.cpp MahjongService.cpp driver.cpp tempCodeRunnerFile.cpp Mahjong.cpp Tile.cpp MahjongResourceFactory.cpp Game.cpp Suit.cpp
+OBJS          = Player$(OBJEXT) MahjongService$(OBJEXT) driver$(OBJEXT) Mahjong$(OBJEXT) Tile$(OBJEXT) MahjongResourceFactory$(OBJEXT) Game$(OBJEXT) Suit$(OBJEXT)
+SRC           = Player.cpp MahjongService.cpp driver.cpp Mahjong.cpp Tile.cpp MahjongResourceFactory.cpp Game.cpp Suit.cpp
 LINK.cc       = $(LD) $(LDFLAGS)
 EXPORTFLAGS   = 
 DEPLIBS       = $(foreach lib, , $(foreach libpath, ., $(wildcard $(libpath)/lib$(lib).a)))
@@ -53,17 +53,11 @@ generated: $(GENERATED_DIRTY)
 Player$(OBJEXT): Player.cpp
 	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Player.cpp
 
-driver2$(OBJEXT): driver2.cpp
-	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) driver2.cpp
-
 MahjongService$(OBJEXT): MahjongService.cpp
 	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) MahjongService.cpp
 
 driver$(OBJEXT): driver.cpp
 	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) driver.cpp
-
-tempCodeRunnerFile$(OBJEXT): tempCodeRunnerFile.cpp
-	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) tempCodeRunnerFile.cpp
 
 Mahjong$(OBJEXT): Mahjong.cpp
 	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Mahjong.cpp

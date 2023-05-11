@@ -1,15 +1,15 @@
-#pragma once
+// #pragma once
 
-#include "IResourceFactory.h"
+// #include "IResourceFactory.h"
 
-class MahjongResourceFactory: public IResourceFactory
-{
-    public:
+// class MahjongResourceFactory: public IResourceFactory
+// {
+//     public:
 
-        MahjongResourceFactory();
-        shared_ptr<Resource> get_resource() const final;
+//         MahjongResourceFactory();
+//         shared_ptr<Resource> get_resource() const final;
 
-    private:
-        void get_handler(const shared_ptr<Session> session);
-        shared_ptr<Resource> resource_;
-};
+//     private:
+//         void get_handler(const shared_ptr<Session> session);
+//         shared_ptr<Resource> resource_;
+// };

@@ -11,6 +11,8 @@
 #
 #----------------------------------------------------------------------------
 
+#CPPFLAGS += -I/Users/aurum/restbed
+#LDFLAGS += -L/Users/aurum/restbed/lib -lrestbed
 
 all: backend
 

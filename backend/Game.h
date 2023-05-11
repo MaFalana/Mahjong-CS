@@ -24,6 +24,6 @@ class Game
 
 };
 
-#include "Game.cpp"
+//#include "Game.cpp"
 
 #endif //C___GAME_H

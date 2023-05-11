@@ -2,9 +2,9 @@
 // Created by Malik Falana on 12/30/22.
 //
 //#pragma once
-#include "Mahjong.cpp"
-#include "Player.cpp"
-#include "Tile.cpp"
+#include "Mahjong.h"
+//#include "Player.h"
+//#include "Tile.h"
 #include "Exception/empty_exception.h"
 
 int main()
@@ -22,3 +22,7 @@ int main()
     //newGame->endGame();
     return 0;
 }
+
+//#include "Mahjong.cpp"
+//#include "Player.cpp"
+//#include "Tile.cpp"
